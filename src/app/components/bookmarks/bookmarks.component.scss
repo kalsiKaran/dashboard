@@ -1,0 +1,31 @@
+@import "../../../assets/variables";
+
+.bookmark-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100vw;
+  padding: 0 4rem;
+  overflow: hidden scroll;
+}
+.bookmark-item {
+  @include flex(space-between);
+  flex-direction: column;
+  height: 100px;
+  width: 100px;
+  padding: 0.5em;
+  border: 1px solid white;
+  overflow: hidden;
+
+  img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    object-position: center;
+  }
+  label {
+    color: $white;
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,20 @@
+@import "../../../assets/variables";
+
+.header {
+  @include flex(center);
+  @include glass;
+  backdrop-filter: blur(5px);
+  background-color: rgba(42, 42, 42, 0.472);
+  border-radius: 0 0 12px 12px;
+  flex-direction: column;
+  min-height: 25vh;
+}
+h1.time {
+  font-size: 6rem;
+  color: $white;
+}
+h4.date {
+  font-size: 1rem;
+  color: $gray-100;
+  font-weight: normal;
+}
