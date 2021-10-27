@@ -1,31 +1,56 @@
 @import "../../../assets/variables";
 
 .bookmark-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  height: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
   width: 100vw;
-  padding: 0 4rem;
   overflow: hidden scroll;
 }
 .bookmark-item {
+  @include glass;
   @include flex(space-between);
   flex-direction: column;
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
   padding: 0.5em;
-  border: 1px solid white;
   overflow: hidden;
+  background: rgb(42 42 42 / 70%);
+  border-radius: 8px;
+  opacity: 0.9;
+
+  &:hover {
+    opacity: 1;
+  }
+  &:last-of-type {
+    justify-content: center;
+  }
 
   img {
-    height: 150px;
-    width: 150px;
+    height: 40px;
+    width: 40px;
+    min-height: 40px;
+    min-width: 40px;
     object-fit: cover;
     object-position: center;
+    border-radius: 8px;
   }
-  label {
+  .label {
     color: $white;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+  }
+  .add-bookmark {
+    color: $white;
+    font-size: 1.5rem;
+    margin-bottom: 0.2em;
   }
 }

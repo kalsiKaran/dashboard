@@ -1,0 +1,72 @@
+@import "../../../assets/variables";
+
+.main-section {
+  margin: 1rem;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden auto;
+  height: unset;
+  max-height: 50vh;
+}
+.todo-list {
+  @include flex(space-between);
+  @include glass;
+  border-radius: 8px;
+  padding: 0.5rem;
+  width: 330px;
+  margin: 0.3rem 0;
+  color: $white;
+  background: rgba(42, 42, 42, 0.6);
+}
+.todo-text {
+  color: $gray-200;
+  flex: 1;
+  margin: 0 0.5rem;
+  line-height: 1.3;
+}
+
+.checkbox,
+.edit,
+.delete {
+  @include flex(center);
+  min-height: 1.6rem;
+  min-width: 1.6rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  opacity: 0.9;
+  cursor: pointer;
+  &:hover {
+    opacity: 1;
+  }
+}
+.checkbox.completed {
+  border-color: transparent;
+  background: $green;
+  .check {
+    opacity: 1;
+  }
+}
+.edit {
+  background: $blue;
+}
+.delete {
+  background: $red;
+}
+
+.checkbox {
+  background: rgba($gray-100, 0.2);
+  border: 1px solid $gray-100;
+  .check {
+    opacity: 0;
+  }
+}
+
+.add-btn {
+  @include glass;
+  display: inline;
+  border-radius: 6px;
+  padding: 0.5em 0.7em;
+  color: $white;
+  background: rgba(42, 42, 42, 0.6);
+  width: 100%;
+}
