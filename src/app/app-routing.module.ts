@@ -9,6 +9,7 @@ const routes: Routes = [
   {path:'bookmarks', component:BookmarksComponent},
   {path:'todo', component:TodoComponent},
   {path:'notes', component:NotesComponent},
+  {path: '**', redirectTo:'bookmarks'},
 
 ];
 
